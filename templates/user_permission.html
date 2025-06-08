@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Permission</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_permission.css') }}">
+    <style>
+        .location-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        #location-status {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Permissions</h1>
+        <div class="location-card">
+            <h2>Grant Live Location Access</h2>
+            <p>We need your permission to access your live location to provide certain features.</p>
+            <button onclick="getLocation()">Grant Location Access</button>
+            <p id="location-status"></p>
+        </div>
+        <p><a href="{{ url_for('index') }}">Go Back to Login</a></p>
+    </div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(sendLocation, locationError);
+                document.getElementById("location-status").innerText = "Requesting location...";
+            } else {
+                document.getElementById("location-status").innerText = "Geolocation is not supported by your browser.";
+            }
+        }
+
+        function sendLocation(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById("location-status").innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+            // Send the location data to the backend
+            fetch('/store_location', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    latitude: latitude,
+                    longitude: longitude
+                    // You'll need to send the username here as well.
+                    // This example assumes the username is available in a JavaScript variable 'username'.
+                    // In a real application, you might store it in localStorage or a cookie after login.
+                    // For simplicity, we'll address session management on the backend.
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("location-status").innerText = "Location data stored successfully!";
+                    // Optionally redirect the user to another page
+                    // window.location.href = '/some_other_page';
+                } else {
+                    document.getElementById("location-status").innerText = `Error storing location: ${data.error || 'Unknown error'}`;
+                }
+            })
+            .catch((error) => {
+                document.getElementById("location-status").innerText = `Error sending location data: ${error}`;
+            });
+        }
+
+        function locationError(error) {
+            let errorMessage;
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    errorMessage = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    errorMessage = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    errorMessage = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    errorMessage = "An unknown error occurred.";
+                    break;
+            }
+            document.getElementById("location-status").innerText = errorMessage;
+        }
+    </script>
+</body>
+</html>

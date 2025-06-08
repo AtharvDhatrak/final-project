@@ -1,0 +1,13 @@
+ID,Name,Type,Zone,State,City,Establishment Year,Time Needed (hrs),Google Review Rating,Entrance Fee (INR),Airport within 50km Radius,Weekly Off,Significance,DSLR Allowed,Number of Google Reviews (in lakhs),Best Time to Visit,Latitude,Longitude
+1,Eiffel Tower,Landmark,Ile-de-France,Paris,Paris,1889,2.5,4.7,2500,Yes,None,"Iconic wrought-iron lattice tower, symbol of Paris, offers panoramic views.",Yes,70,Evening,48.8584,2.2945
+2,Louvre Museum,Museum,Ile-de-France,Paris,Paris,1793,4.7,1500,Yes,Tuesday,"World's largest art museum, home to the Mona Lisa and Venus de Milo.",Yes,55,Morning,48.8606,2.3376
+3,Notre-Dame Cathedral,Religious Site,Ile-de-France,Paris,Paris,1163,1.5,4.6,0,Yes,None,"Historic Catholic cathedral, famous for its Gothic architecture and gargoyles.",Yes,40,Anytime,48.8530,2.3499
+4,Sacré-Cœur Basilica,Religious Site,Ile-de-France,Paris,Paris,1914,1.0,4.7,0,Yes,None,"Stunning white basilica offering incredible city views from Montmartre.",Yes,30,Sunset,48.8867,2.3431
+5,Arc de Triomphe,Monument,Ile-de-France,Paris,Paris,1836,1.0,4.7,1300,Yes,None,"Triumphal arch honoring those who fought for France, great views from top.",Yes,28,Anytime,48.8738,2.2950
+6,Gateway of India,Monument,West,Maharashtra,Mumbai,1924,1.0,4.5,0,Yes,None,"Historic arch monument built to commemorate the landing of King George V.",Yes,12,Evening,18.9220,72.8347
+7,Chhatrapati Shivaji Maharaj Vastu Sangrahalaya,Museum,West,Maharashtra,Mumbai,1922,3.0,4.6,700,Yes,Monday,"Prominent museum in Mumbai, showcasing Indian history, art, and natural history.",Yes,8,Anytime,18.9272,72.8329
+8,Red Fort,Fortress,North,Delhi,Delhi,1639,3.0,4.5,950,Yes,Monday,"Historic fort in Delhi, served as the main residence of the Mughal emperors.",Yes,15,Morning,28.6562,77.2410
+9,India Gate,Monument,North,Delhi,Delhi,1931,1.0,4.6,0,Yes,None,"War memorial dedicated to soldiers of British India, iconic landmark.",Yes,20,Evening,28.6129,77.2295
+10,Taj Mahal,Monument,North,Uttar Pradesh,Agra,1653,3.0,4.8,1100,Yes,Friday,"Iconic ivory-white marble mausoleum, a UNESCO World Heritage Site.",Yes,60,Sunrise,27.1751,78.0421
+11,Qutub Minar,Minaret,North,Delhi,Delhi,1192,2.0,4.6,600,Yes,None,"UNESCO World Heritage Site, a minaret and victory tower.",Yes,10,Anytime,28.5245,77.1855
+12,Humayun's Tomb,Tomb,North,Delhi,Delhi,1570,2.0,4.5,600,Yes,None,"Tomb of the Mughal Emperor Humayun, precursor to the Taj Mahal.",Yes,7,Anytime,28.5936,77.2589

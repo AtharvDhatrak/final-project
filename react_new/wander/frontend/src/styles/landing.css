@@ -1,0 +1,41 @@
+/* LandingPage.css */
+
+/* Set the gradient background */
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #a3c7f2, #d5aef5, #ff97ca);
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .landing-page h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+  }
+  
+  .landing-page p {
+    font-size: 1.125rem;
+    color: #6a6a6a;
+    margin-bottom: 32px;
+    max-width: 500px;
+  }
+  
+  .landing-page .explore-btn {
+    background-color: #9b4de1;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .landing-page .explore-btn:hover {
+    background-color: #7c32b1;
+  }
+  

@@ -1,0 +1,86 @@
+/* user_permission.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #2d2d2d;
+}
+
+.location-card {
+    background-color: #f0f8ff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.location-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.location-card p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #185a9d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #143d73;
+}
+
+#location-status {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+a {
+    text-decoration: none;
+    color: #185a9d;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #143d73;
+}
