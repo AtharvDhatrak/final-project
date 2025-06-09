@@ -29,7 +29,7 @@
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin-right:75%;
+    margin-right:60%;
   }
   
   .navbar-links {
@@ -41,6 +41,13 @@
     align-items: flex-end;
   }
   
+  .navbar-links li button {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border: none;
+  }
   .navbar-links li a {
     text-decoration: none;
     color: #333;

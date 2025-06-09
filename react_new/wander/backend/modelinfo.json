@@ -1,0 +1,52 @@
+{
+    "india gate": {
+      "description": "The India Gate is a war memorial located astride the Rajpath...",
+      "created_by": "Edwin Lutyens (architect)",
+      "created_on": "1921 (construction began), 1931 (completed)"
+    },
+    "taj mahal": {
+      "description": "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna...",
+      "created_by": "Ustad Ahmed Lahori (chief architect)",
+      "created_on": "1631 (construction began), 1653 (completed)"
+    },
+    "great wall of china": {
+      "description": "The Great Wall of China is a series of fortifications that were built across the historical northern borders...",
+      "created_by": "Various dynasties and emperors over centuries",
+      "created_on": "7th century BC (earliest sections), Ming Dynasty (most well-known sections, 1368-1644 AD)"
+    },
+    "pyramids of giza": {
+      "description": "The Pyramids of Giza, located on the Giza Plateau in the outskirts of Cairo, Egypt, are ancient pyramids that served as tombs for pharaohs.",
+      "created_by": "Ancient Egyptians (built for Pharaohs Khufu, Khafre, and Menkaure)",
+      "created_on": "Circa 2580-2560 BC (Great Pyramid of Giza)"
+    },
+    "gateway of india": {
+      "description": "The Gateway of India is an iconic arch-monument built in the early 20th century in Mumbai, India...",
+      "created_by": "George Wittet (architect)",
+      "created_on": "March 31, 1913 (foundation stone laid), 1924 (completed)"
+    },
+    "paris": {
+      "description": "Paris, the capital of France, is known as the 'City of Love'...",
+      "created_by": null,
+      "created_on": null
+    },
+    "tokyo": {
+      "description": "Tokyo, the bustling capital of Japan, offers a mix of futuristic skyscrapers...",
+      "created_by": null,
+      "created_on": null
+    },
+    "rome": {
+      "description": "Rome, the 'Eternal City' of Italy, is rich in history with ancient ruins...",
+      "created_by": null,
+      "created_on": null
+    },
+    "new york": {
+      "description": "New York City, often called 'The Big Apple,' is a global hub for finance...",
+      "created_by": null,
+      "created_on": null
+    },
+    "london": {
+      "description": "London, the capital of England, boasts historical landmarks like the Tower of London...",
+      "created_by": null,
+      "created_on": null
+    }
+  }

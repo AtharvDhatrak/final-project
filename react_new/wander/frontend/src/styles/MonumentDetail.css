@@ -1,0 +1,219 @@
+/* src/styles/MonumentDetail.css */
+
+.monument-detail-wrapper {
+    position: relative; /* Make it a positioning context for the popup */
+    /* You might want to adjust the main container's width/height if needed */
+  }
+  
+  .monument-detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Ensure it stays above the overlay */
+    z-index: 1; /* Default content z-index */
+  }
+  
+  .monument-detail-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+  }
+  
+  .monument-detail-container p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .monument-detail-container strong {
+    color: #222;
+  }
+  
+  .detail-loading, .detail-error, .detail-not-found {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: #777;
+  }
+  
+  .detail-error {
+    color: #d9534f; /* Bootstrap's danger color */
+  }
+  
+  /* Button styles */
+  .button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .action-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .action-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .extract-button {
+    background-color: #28a745; /* Green */
+  }
+  
+  .extract-button:hover:not(:disabled) {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  .ai-button {
+    background-color: #007bff; /* Blue */
+  }
+  
+  .ai-button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* --- Loader and Text Display Styles --- */
+  
+  /* Loader Container */
+  .info-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0f7fa; /* Light blue background */
+    border-radius: 8px;
+    border: 1px solid #b2ebf2;
+    color: #00796b; /* Dark teal text */
+    font-size: 1.1em;
+  }
+  
+  /* Spinner Animation */
+  .spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Sections for API responses (extracted info and AI response) */
+  .extra-info-section, .ai-response-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    text-align: left; /* Align text to the left for readability */
+  }
+  
+  .extra-info-section h3, .ai-response-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center; /* Center the heading */
+  }
+  
+  /* Readability for extracted and AI text */
+  .extracted-text, .ai-text {
+    font-family: 'Georgia', serif; /* Use a readable serif font */
+    font-size: 1.1em;
+    line-height: 1.8; /* Increase line height for better readability */
+    color: #333;
+    text-align: justify; /* Justify text for a clean block look */
+    padding: 0 10px; /* Some internal padding */
+  }
+  
+  .error-message {
+    color: #dc3545; /* Red */
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #6c757d; /* Grey */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-link:hover {
+    background-color: #5a6268;
+  }
+  
+  /* --- NEW STYLES FOR CHATBOT POPUP (REVISED) --- */
+  .chatbot-overlay {
+    position: fixed; /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker, semi-transparent overlay */
+    z-index: 1000; /* High z-index to appear above everything */
+    backdrop-filter: blur(5px); /* Optional: blur the background */
+  
+    /* NEW: Positioning the content to the bottom-right */
+    display: block; /* Allows margin auto to work for content positioning */
+    padding: 20px; /* Padding from the edges of the screen */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+  }
+  
+  .chatbot-popup-content {
+    position: absolute; /* Positioned relative to the overlay */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+    z-index: 1001; /* Ensure chatbot content is above the overlay */
+    /* The Chatbot component's internal div has its own sizing (max-w-md, h-[80vh]) */
+    /* We just need to make sure this container respects it */
+  }
+  
+  /* NEW: Styles for the close link/button *outside* the chatbot */
+  .close-chatbot-link {
+    position: absolute;
+    top: 10px; /* Adjust as needed for spacing from the top of the popup */
+    left: -40px; /* Position to the left of the chatbot content */
+    background-color: #dc3545; /* Red for close */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    z-index: 1002; /* Ensure it's above the chatbot content */
+    white-space: nowrap; /* Prevent wrapping */
+    /* Rotate for vertical alignment if desired */
+    transform: rotate(-90deg) translateY(-50%); /* Rotate and adjust for centering */
+    transform-origin: top left; /* Pivot point for rotation */
+  }
+  
+  .close-chatbot-link:hover {
+    background-color: #c82333;
+  }
